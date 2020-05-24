@@ -36,6 +36,7 @@ func main() {
 	startQuizWithProblems(problems)
 }
 
+// Takes the lines from the CSV and turns them into Problem model objects
 func parseLines(lines [][]string) []problem {
 	ret := make([]problem, len(lines))
 	for i, line := range lines {
@@ -48,6 +49,7 @@ func parseLines(lines [][]string) []problem {
 	return ret
 }
 
+// Starts the quiz with the problems after parsed from the CSV
 func startQuizWithProblems(problems []problem) {
 	var numCorrect int
 	for i, p := range problems {
@@ -65,6 +67,7 @@ func startQuizWithProblems(problems []problem) {
 	fmt.Printf("You scored %d out of %d.\n", numCorrect, len(problems))
 }
 
+// Checks the user answer vs the answer from the CSV for a particular problem
 func checkAnswer(userAnswer string, answer string) bool {
 	if userAnswer == answer {
 		return true
@@ -73,6 +76,7 @@ func checkAnswer(userAnswer string, answer string) bool {
 	return false
 }
 
+// Exits the program with a custom message.
 func exit(msg string) {
 	fmt.Printf("Exiting program: %s \n", msg)
 	os.Exit(1)
