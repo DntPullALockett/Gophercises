@@ -11,9 +11,11 @@ The CSV file should default to problems.cvs but the user should be able to custo
 
 The CSV file will be in a format like below where the first column is the question and the second column in the same row is the answer to that question
 
-5+5,10
-7+3,10
-1+1,2
-8+3,11
+| Question | Answer |
+| -------- | ------ |
+|  5+5     |   10   |
+|  7+3     |   10   |
+|  1+1     |    2   |
+|  8+3     |   11   |
 
 At the end of the quiz game out the total number of questions correct and how many questions there were in total. 
